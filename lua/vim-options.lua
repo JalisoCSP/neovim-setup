@@ -33,14 +33,3 @@ vim.api.nvim_set_option("clipboard", "unnamed")
 -- remove trailing whitespace
 -- map <Leader>ws :%s/\s\+$//e
 vim.keymap.set('n', '<leader>ws', ":%s/\\s\\+$//e<CR>")
-
--- auto highlight trailing whitespace
--- https://www.manjotbal.ca/blog/neovim-whitespace.html
-vim.api.nvim_set_hl(0, 'TrailingWhitespace', { bg='DarkGrey', ctermbg='DarkGrey' })
-vim.api.nvim_create_autocmd('BufEnter', {
-  pattern = '*',
-  command = [[
-    syntax clear TrailingWhitespace |
-    syntax match TrailingWhitespace "\_s\+$"
-  ]]
-})
