@@ -18,9 +18,6 @@ vim.cmd("command! Vs vs")
 vim.cmd("command! Wq wq")
 
 -- shortcuts to open specific files
-vim.keymap.set('n', '<leader>.', ':e ~/.dotfiles/')
-vim.keymap.set('n', '<leader>s', ':e db/schema.rb')
-vim.keymap.set('n', '<leader>db', ':e config/database.yml')
 vim.keymap.set('n', '<leader>n', ':e ~/Documents/Notes/main.txt')
 
 -- resize tab
@@ -31,5 +28,4 @@ vim.keymap.set('n', '<leader>e', '<C-w>=')
 vim.api.nvim_set_option("clipboard", "unnamed")
 
 -- remove trailing whitespace
--- map <Leader>ws :%s/\s\+$//e
 vim.keymap.set('n', '<leader>ws', ":%s/\\s\\+$//e<CR>")
